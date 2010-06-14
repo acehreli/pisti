@@ -72,7 +72,29 @@ DesteDeğer[] DesteDeğerTanımla(OyunKartı[] kartlar)
 {
 	DesteDeğer[] değerler;
 	foreach(kart;kartlar){
-		değerler~=DesteDeğer(kart,kartPuanı.yok,piştiPuanı.pişti,oynanmış.hayır,kartDavranışı.normal);
+		if(kart.değer=='A'){
+			değerler~=DesteDeğer(kart,kartPuanı.tek,piştiPuanı.pişti,
+			oynanmış.hayır,kartDavranışı.normal);
+			continue;
+		}
+		if(kart.değer=='J'){
+			değerler~=DesteDeğer(kart,kartPuanı.tek,piştiPuanı.valeliPişti,
+			oynanmış.hayır,kartDavranışı.alır);
+			continue;
+		}
+		if((kart.değer=='2')&&(kart.biçim=='♣')){
+			değerler~=DesteDeğer(kart,kartPuanı.çift,piştiPuanı.pişti,
+			oynanmış.hayır,kartDavranışı.normal);
+			continue;
+		}
+		if((kart.değer=='0')&&(kart.biçim=='♢')){
+			değerler~=DesteDeğer(kart,kartPuanı.üç,piştiPuanı.pişti,
+			oynanmış.hayır,kartDavranışı.normal);
+			continue;
+		}
+
+		değerler~=DesteDeğer(kart,kartPuanı.yok,piştiPuanı.pişti,
+		oynanmış.hayır,kartDavranışı.normal);
 	}
 	return değerler;
 }
