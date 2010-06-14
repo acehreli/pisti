@@ -6,9 +6,8 @@ import std.string;
 struct OyunKağıdı
 {
 	
-	dchar biçim;
 	dchar değer;
-
+	dchar biçim;
 	string toString()
 	{
 		return format("%s %s",değer,biçim);
@@ -32,7 +31,7 @@ enum oynanmış
 	evet,hayır }
 
 
-struct desteDeğer
+struct DesteDeğer
 {
 	OyunKağıdı kart;
 	kartPuanı puan;
