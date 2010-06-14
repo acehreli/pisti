@@ -60,7 +60,6 @@ OyunKartı[] OyunKartıTanımla()
     
     return kart;
 }
-///////// Özel kartlar için DesteDeğer Şuanlık hatalı.
 /*
  * A         : 1 puan x 4 = 4 puan
  * J         : 1 puan x 4 = 4 puan  //Alır //pişti 20 puan
