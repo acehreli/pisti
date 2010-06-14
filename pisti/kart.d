@@ -3,7 +3,7 @@ module kart;
 
 import std.string;
 
-struct OyunKağıdı
+struct OyunKartı
 {
 	
 	dchar değer;
