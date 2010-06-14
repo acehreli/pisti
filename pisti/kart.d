@@ -33,9 +33,24 @@ enum oynanmış
 
 struct DesteDeğer
 {
-	OyunKağıdı kart;
+	OyunKartı kart;
 	kartPuanı puan;
 	oynanmış oynanmış_mı;
 	kartDavranışı davranış;
 	
+}
+
+
+OyunKartı[] OyunKartıTanımla()
+{
+	dchar[] biçimler="♠♡♢♣"d.dup;
+	dchar[] değerler="234567890JQKA"d.dup;
+	OyunKartı[] kart;
+	foreach(değer;değerler){
+		foreach(biçim;biçimler){
+			kart~=OyunKartı(değer,biçim);
+		}
+	}
+	
+	return kart;
 }
