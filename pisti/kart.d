@@ -1,6 +1,7 @@
 // Kart davranışları ve puanları burada tanımlanacak.
 module kart;
 
+import std.string;
 
 struct OyunKağıdı
 {
