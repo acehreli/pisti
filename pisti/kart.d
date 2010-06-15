@@ -56,10 +56,10 @@ body
 {
     dchar[] biçimler="♠♡♢♣"d.dup;
     dchar[] değerler="234567890JQKA"d.dup;
-    OyunKartı[52] kart;
-    foreach(sayaç,değer;değerler){
+    OyunKartı[] kart;
+    foreach(değer;değerler){
         foreach(biçim;biçimler){
-            kart[sayaç]=OyunKartı(değer,biçim);
+            kart~=OyunKartı(değer,biçim);
         }
     }
     randomShuffle(kart);
