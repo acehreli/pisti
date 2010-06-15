@@ -68,7 +68,18 @@ body
 
 unittest
 {
+    auto boşKart = OyunKartı();
+
     auto deste = OyunKartıTanımla();
+    foreach (i, kart; deste[0 .. $ - 1]) {
+        // Bütün kartlar kurulmuş olmalı
+        assert(kart != boşKart);
+
+        foreach (ikinciKart; deste[i + 1 .. $]) {
+            // Hiçbir kart tekrarlanmamalı
+            assert(kart != ikinciKart);
+        }
+    }
 }
 
 /*
