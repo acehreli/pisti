@@ -2,6 +2,7 @@
 module kart;
 
 import std.string;
+import std.random;
 
 struct OyunKartı
 {
@@ -55,13 +56,13 @@ body
 {
     dchar[] biçimler="♠♡♢♣"d.dup;
     dchar[] değerler="234567890JQKA"d.dup;
-    OyunKartı[] kart;
-    foreach(değer;değerler){
+    OyunKartı[52] kart;
+    foreach(sayaç,değer;değerler){
         foreach(biçim;biçimler){
-            kart~=OyunKartı(değer,biçim);
+            kart[sayaç]=OyunKartı(değer,biçim);
         }
     }
-    
+    randomShuffle(kart);
     return kart;
 }
 
@@ -116,3 +117,5 @@ unittest
     assert(OyunKartı('A', '♡') in değerler);
     assert(OyunKartı('2', '♣') in değerler);
 }
+
+
