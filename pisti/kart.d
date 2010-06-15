@@ -47,6 +47,11 @@ struct DesteDeğer
 
 
 OyunKartı[] OyunKartıTanımla()
+out (sonuç)
+{
+    assert(sonuç.length == 52);
+}
+body
 {
     dchar[] biçimler="♠♡♢♣"d.dup;
     dchar[] değerler="234567890JQKA"d.dup;
@@ -59,6 +64,12 @@ OyunKartı[] OyunKartıTanımla()
     
     return kart;
 }
+
+unittest
+{
+    auto deste = OyunKartıTanımla();
+}
+
 /*
 * A : 1 puan x 4 = 4 puan
 * J : 1 puan x 4 = 4 puan //Alır //pişti 20 puan
@@ -67,6 +78,11 @@ OyunKartı[] OyunKartıTanımla()
 *
 * */
 DesteDeğer[OyunKartı] DesteDeğerTanımla(OyunKartı[] kartlar)
+out (sonuç)
+{
+    assert(sonuç.length == kartlar.length);
+}
+body
 {
     DesteDeğer[OyunKartı] değerler;
     foreach(kart;kartlar){
@@ -94,4 +110,9 @@ DesteDeğer[OyunKartı] DesteDeğerTanımla(OyunKartı[] kartlar)
     return değerler;
 }
 
-
+unittest
+{
+    auto değerler = DesteDeğerTanımla(OyunKartıTanımla());
+    assert(OyunKartı('A', '♡') in değerler);
+    assert(OyunKartı('2', '♣') in değerler);
+}
