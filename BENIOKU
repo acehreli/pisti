@@ -1,4 +1,9 @@
 Pişti kağıt oyunu
 
-deneme satırı
-bir denemede ben yapiom 
+Programı oluşturmak için:
+
+  make
+
+Oluşan program dosyalarını silmek için:
+
+  make temizle
