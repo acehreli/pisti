@@ -15,9 +15,6 @@ struct OyunKartı
     }
 }
 
-enum kartGörünürlüğü
-{ görünsün,görünmesin }
-
 enum kartPuanı
 {
     yok        =0,
@@ -104,24 +101,24 @@ body
     foreach(kart;kartlar){
         if(kart.değer=='A'){
             değerler[kart]=DesteDeğer(kartPuanı.tek,piştiPuanı.pişti,
-            oynanmış.hayır,kartDavranışı.normal,kartGörünürlüğü.görünmesin);
+            oynanmış.hayır,kartDavranışı.normal);
             continue;
         }if(kart.değer=='J'){
             değerler[kart]=DesteDeğer(kartPuanı.tek,piştiPuanı.valeliPişti,
-            oynanmış.hayır,kartDavranışı.alır,kartGörünürlüğü.görünmesin);
+            oynanmış.hayır,kartDavranışı.alır);
             continue;
         }if((kart.değer=='2')&&(kart.biçim=='♣')){
             değerler[kart]=DesteDeğer(kartPuanı.çift,piştiPuanı.pişti,
-            oynanmış.hayır,kartDavranışı.normal,kartGörünürlüğü.görünmesin);
+            oynanmış.hayır,kartDavranışı.normal);
             continue;
         }if((kart.değer=='0')&&(kart.biçim=='♢')){
             değerler[kart]=DesteDeğer(kartPuanı.üç,piştiPuanı.pişti,
-            oynanmış.hayır,kartDavranışı.normal,kartGörünürlüğü.görünmesin);
+            oynanmış.hayır,kartDavranışı.normal);
             continue;
         }
 
         değerler[kart]=DesteDeğer(kartPuanı.yok,piştiPuanı.pişti,
-        oynanmış.hayır,kartDavranışı.normal,kartGörünürlüğü.görünmesin);
+        oynanmış.hayır,kartDavranışı.normal);
     }
     return değerler;
 }
