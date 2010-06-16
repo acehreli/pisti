@@ -43,7 +43,6 @@ struct DesteDeğer
     piştiPuanı pişti;
     oynanmış oynanmış_mı;
     kartDavranışı davranış;
-    kartGörünürlüğü görünürlük;
     
 }
 
