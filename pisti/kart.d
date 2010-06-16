@@ -14,7 +14,10 @@ struct OyunKartı
         return format("%s %s",değer,biçim);
     }
 }
-    
+
+enum kartGörünürlüğü
+{ görünsün,görünmesin }
+
 enum kartPuanı
 {
     yok        =0,
@@ -43,6 +46,7 @@ struct DesteDeğer
     piştiPuanı pişti;
     oynanmış oynanmış_mı;
     kartDavranışı davranış;
+    kartGörünürlüğü görünürlük;
     
 }
 
@@ -100,24 +104,24 @@ body
     foreach(kart;kartlar){
         if(kart.değer=='A'){
             değerler[kart]=DesteDeğer(kartPuanı.tek,piştiPuanı.pişti,
-            oynanmış.hayır,kartDavranışı.normal);
+            oynanmış.hayır,kartDavranışı.normal,kartGörünürlüğü.görünmesin);
             continue;
         }if(kart.değer=='J'){
             değerler[kart]=DesteDeğer(kartPuanı.tek,piştiPuanı.valeliPişti,
-            oynanmış.hayır,kartDavranışı.alır);
+            oynanmış.hayır,kartDavranışı.alır,kartGörünürlüğü.görünmesin);
             continue;
         }if((kart.değer=='2')&&(kart.biçim=='♣')){
             değerler[kart]=DesteDeğer(kartPuanı.çift,piştiPuanı.pişti,
-            oynanmış.hayır,kartDavranışı.normal);
+            oynanmış.hayır,kartDavranışı.normal,kartGörünürlüğü.görünmesin);
             continue;
         }if((kart.değer=='0')&&(kart.biçim=='♢')){
             değerler[kart]=DesteDeğer(kartPuanı.üç,piştiPuanı.pişti,
-            oynanmış.hayır,kartDavranışı.normal);
+            oynanmış.hayır,kartDavranışı.normal,kartGörünürlüğü.görünmesin);
             continue;
         }
 
         değerler[kart]=DesteDeğer(kartPuanı.yok,piştiPuanı.pişti,
-        oynanmış.hayır,kartDavranışı.normal);
+        oynanmış.hayır,kartDavranışı.normal,kartGörünürlüğü.görünmesin);
     }
     return değerler;
 }

@@ -1,3 +1,9 @@
-// Programın arayüzü burada belirtecek. Diğer modüllerden tamamen bağımsız 
-// olacak ve sadece oyuna arayüz sağlayacak. Anlatan ile program kullanıcısı arasında
-// köprü konumunda olacak.
+// çizici.d ile köprü kurar.
+
+struct kullanıcıAyarları
+{
+    dchar[] kulllanıcıAdı;
+    int kişiSayısı;
+    int bitmePuanı;
+    
+}
