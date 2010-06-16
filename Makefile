@@ -9,6 +9,7 @@ KAYNAKLAR=\
     pisti/kart.d \
     pisti/masa.d \
     pisti/oyuncu.d \
+    pisti/çizici.d \
     pisti/pisti.d \
 
 SECENEKLER=-w -wi

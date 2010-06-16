@@ -1,6 +1,6 @@
 // çizici.d ile köprü kurar.
 
-struct kullanıcıAyarları
+struct KullanıcıAyarları
 {
     dchar[] kulllanıcıAdı;
     int kişiSayısı;
