@@ -7,3 +7,4 @@ struct KullanıcıAyarları
     int bitmePuanı;
     
 }
+

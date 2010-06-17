@@ -17,14 +17,14 @@ unittest
     assert(kart2[4..$]==kart);
 }
 
-OyunKart[] yerdekiKartlar;
+OyunKartı[] yerdekiKartlar;
 
 struct birEldekiHerşey  /// Bir elde tutulması gereken Puanlar Kartlar
 {
-    OyunKart[] birinciOyuncudakiKartlar;
-    OyunKart[] ikinciOyuncudakiKartlar;
-    OyunKart[] üçüncüOyuncudakiKartlar;
-    OyunKart[] dördüncüOyuncudakiKartlar;
+    OyunKartı[] birinciOyuncudakiKartlar;
+    OyunKartı[] ikinciOyuncudakiKartlar;
+    OyunKartı[] üçüncüOyuncudakiKartlar;
+    OyunKartı[] dördüncüOyuncudakiKartlar;
     
     int birinciOyuncudakiPuan;
     int ikinciOyuncudakiPuan;
