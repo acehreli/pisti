@@ -16,3 +16,29 @@ unittest
     assert(kart2[0..4]==kart3);
     assert(kart2[4..$]==kart);
 }
+
+OyunKart[] yerdekiKartlar;
+
+struct birEldekiHerşey  /// Bir elde tutulması gereken Puanlar Kartlar
+{
+    OyunKart[] birinciOyuncudakiKartlar;
+    OyunKart[] ikinciOyuncudakiKartlar;
+    OyunKart[] üçüncüOyuncudakiKartlar;
+    OyunKart[] dördüncüOyuncudakiKartlar;
+    
+    int birinciOyuncudakiPuan;
+    int ikinciOyuncudakiPuan;
+    int üçüncüOyuncudakiPuan;
+    int dördüncüOyuncudakiPuan;
+    
+}
+
+struct toplamPuan
+{
+
+    int birinciOyuncudakiToplamPuan;
+    int ikinciOyuncudakiToplamPuan;
+    int üçüncüOyuncudakiToplamPuan;
+    int dördüncüOyuncudakiToplamPuan;
+
+}
