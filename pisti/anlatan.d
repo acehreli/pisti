@@ -1,1 +1,1 @@
-// Bütün olaylar buraya dönecek ve buda masanın anlayabileceği kod gönderecek.
+// Bütün olaylar buraya dönecek ve bu da masanın anlayabileceği kod gönderecek.
