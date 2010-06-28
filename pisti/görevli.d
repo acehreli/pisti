@@ -42,19 +42,46 @@ struct birEldekiHerşey  /// Bir elde tutulması gereken Puanlar Kartlar
     OyunKartı[] üçüncüOyuncudakiKartlar;
     OyunKartı[] dördüncüOyuncudakiKartlar;
     
-    int birinciOyuncudakiPuan;
-    int ikinciOyuncudakiPuan;
-    int üçüncüOyuncudakiPuan;
-    int dördüncüOyuncudakiPuan;
-    
 }
 
-struct toplamPuan
+struct tümEl
 {
+    /// birinciOyuncudakiTümKartlarınDeğeri
+    DesteDeğer[OyunKartı] bOTKD;
+    DesteDeğer[OyunKartı] iOTKD;
+    DesteDeğer[OyunKartı] üOTKD;
+    DesteDeğer[OyunKartı] dOTKD;
 
-    int birinciOyuncudakiToplamPuan;
-    int ikinciOyuncudakiToplamPuan;
-    int üçüncüOyuncudakiToplamPuan;
-    int dördüncüOyuncudakiToplamPuan;
+}
+// true ise alır false ise alamaz
+bool alır_mı(OyunKartı atılan, OyunKartı yerdeki)
+{
+    if(atılan.değer==yerdeki.değer) {
+        
+        return true;
+        
+    } else if(atılan.değer=='J') {
+        
+        return true;
+        
+    }
+    return false;
+}
+unittest 
+{ //♠♡♢♣
+    auto a1 = OyunKartı('4','♠');
+    auto a2 = OyunKartı('5','♠');
+    
+    auto a3 = OyunKartı('4','♣');
+    auto a4 = OyunKartı('4','♠');
+    
+    auto a5 = OyunKartı('J','♢');
+    auto a6 = OyunKartı('5','♠');
+    assert(!alır_mı(a1,a2));
+    
+    assert(alır_mı(a3,a4));
+    
+    assert(alır_mı(a5,a6));
+
 
 }

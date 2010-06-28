@@ -8,3 +8,4 @@ struct KullanıcıAyarları
     
 }
 
+auto kullanıcı = KullanıcıAyarları();
