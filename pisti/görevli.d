@@ -56,16 +56,7 @@ struct tümEl
 // true ise alır false ise alamaz
 bool alır_mı(OyunKartı atılan, OyunKartı yerdeki)
 {
-    if(atılan.değer==yerdeki.değer) {
-        
-        return true;
-        
-    } else if(atılan.değer=='J') {
-        
-        return true;
-        
-    }
-    return false;
+    return (atılan.değer == yerdeki.değer) || (atılan.değer == 'J');
 }
 unittest 
 { //♠♡♢♣
