@@ -30,3 +30,8 @@ ${PROGRAM_DIZINI}/pisti: ${PROGRAM_DIZINI}/test
 .PHONY: temizle clean
 temizle clean:
 	rm -rf ${PROGRAM_DIZINI}
+
+.PHONY: 
+dene:
+	pisti
+	/bin/./pisti

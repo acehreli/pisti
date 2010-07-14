@@ -8,5 +8,5 @@ import oyuncu;
 
 void main()
 {
-
+    auto kullanıcı = KullanıcıAyarları(kullanıcıAdınıAl,kişiSayısınıAl,bitmePuanınıAl);
 }

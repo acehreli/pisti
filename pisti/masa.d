@@ -1,11 +1,12 @@
 // çizici.d ile köprü kurar.
+module masa;
 
-struct KullanıcıAyarları
-{
-    dchar[] kulllanıcıAdı;
-    int kişiSayısı;
-    int bitmePuanı;
-    
+public{
+    struct KullanıcıAyarları
+    {
+        dchar[] kulllanıcıAdı;
+        int kişiSayısı;
+        int bitmePuanı;
+        
+    }
 }
-
-auto kullanıcı = KullanıcıAyarları();
