@@ -26,7 +26,7 @@ body
 }
 unittest
 {
-    auto kart = OyunKartıTanımla();
+    auto kart = yeniDeste();
     auto kart2 = kart.dup;
     auto kart3 = dörtOyunKartıAl(kart);
     assert(kart2[0..4]==kart3);

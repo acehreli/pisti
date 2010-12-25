@@ -47,7 +47,7 @@ struct DesteDeğer
 }
 
 
-OyunKartı[] OyunKartıTanımla()
+OyunKartı[] yeniDeste()
 out (sonuç)
 {
     assert(sonuç.length == 52);
@@ -70,7 +70,7 @@ unittest
 {
     auto boşKart = OyunKartı();
 
-    auto deste = OyunKartıTanımla();
+    auto deste = yeniDeste();
     foreach (i, kart; deste[0 .. $ - 1]) {
         // Bütün kartlar kurulmuş olmalı
         assert(kart != boşKart);
@@ -124,7 +124,7 @@ body
 
 unittest
 {
-    auto değerler = DesteDeğerTanımla(OyunKartıTanımla());
+    auto değerler = DesteDeğerTanımla(yeniDeste());
     assert(OyunKartı('A', '♡') in değerler);
     assert(OyunKartı('2', '♣') in değerler);
 }
